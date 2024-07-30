@@ -9,6 +9,9 @@ touch "/home/${iuser}/.ssh/authorized_keys"
 chmod 0600 "/home/${iuser}/.ssh/authorized_keys"
 chown -R $iuser:$iuser "/home/${iuser}/.ssh"
 chown -R $iuser:$iuser "/home/${iuser}"
+touch "/home/${iuser}/.bash_aliases"
+
+echo "alias ls='ls -al --color=auto'" >> /home/${iuser}/.bash_aliases
 
 touch /etc/sudoers.d/dev
 echo "Defaults:${iuser} !fqdn" >> /etc/sudoers.d/${iuser}
