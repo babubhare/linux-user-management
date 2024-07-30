@@ -8,3 +8,9 @@ end
 
 The above will try to login with the dev user.
 
+Changes to .bashrc file:
+
+Vagrant.configure("2") do |config|
+  config.vm.box = "generic/ubuntu2310"
+  config.ssh.username = "dev"
+end
