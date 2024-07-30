@@ -11,6 +11,6 @@ chown -R $iuser:$iuser "/home/${iuser}/.ssh"
 chown -R $iuser:$iuser "/home/${iuser}"
 
 touch /etc/sudoers.d/dev
-echo "Defaults:${iuser} !fqdn" >> /etc/sudoers.d/dev
-echo "Defaults:${iuser} !requiretty" >> /etc/sudoers.d/dev
-echo "${iuser} ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers.d/dev
+echo "Defaults:${iuser} !fqdn" >> /etc/sudoers.d/${iuser}
+echo "Defaults:${iuser} !requiretty" >> /etc/sudoers.d/${iuser}
+echo "${iuser} ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers.d/${iuser}
