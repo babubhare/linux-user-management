@@ -2,6 +2,8 @@
 iuser=dev
 ipasswd=dev
 
+mkdir /etc/skel/.ssh
+
 adduser ${iuser} --gecos "dev,dev,dev,dev" --disabled-password
 passwd "$iuser" <<<"$ipasswd"$'\n'"$ipasswd"
 chmod 0700 "/home/${iuser}/.ssh"
@@ -11,7 +13,7 @@ chown -R $iuser:$iuser "/home/${iuser}/.ssh"
 chown -R $iuser:$iuser "/home/${iuser}"
 touch "/home/${iuser}/.bash_aliases"
 
-echo "alias ls='ls -al --color=auto'" >> /home/${iuser}/.bash_aliases
+echo "alias ll='ls -al --color=auto'" >> /home/${iuser}/.bash_aliases
 
 touch /etc/sudoers.d/dev
 echo "Defaults:${iuser} !fqdn" >> /etc/sudoers.d/${iuser}
