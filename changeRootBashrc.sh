@@ -25,4 +25,5 @@ echo "else" >> /root/.bashrc
     echo "PS1='\${debian_chroot:+(\$debian_chroot)}\u@\$bc_systemname:\w\$ '" >> /root/.bashrc
 echo "fi" >> /root/.bashrc
 
+source /root/.bashrc
 sudo hostnamectl set-hostname ${bc_systemname}
