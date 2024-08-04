@@ -17,7 +17,7 @@ echo "count=\${#temp}" >> /home/${iuser}/.bashrc
 echo "bc_codename=\$(lsb_release -c | cut -c 11-\$count)" >> /home/${iuser}/.bashrc
 echo "temp=\$(lsb_release -i)" >> /home/${iuser}/.bashrc
 echo "count=\${#temp}" >> /home/${iuser}/.bashrc
-echo "bc_systemname="v-lpic-\${bc_distribution_id}\${bc_release}\${bc_codename}\${kernel_version}"" >> /home/${iuser}/.bashrc
+echo "bc_systemname="v-awsdevops-\${bc_distribution_id}\${bc_release}\${bc_codename}\${kernel_version}"" >> /home/${iuser}/.bashrc
 echo "# END CHANGES" >> /root/.bashrc
 
 echo "color_prompt=yes" >> /home/${iuser}/.bashrc
